@@ -13,5 +13,11 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.3",
+    "modernizr": "~2.8.3",
+    "jquery": "~2.1.4",
+    "lodash": "~3.9.3"
+  }
 }

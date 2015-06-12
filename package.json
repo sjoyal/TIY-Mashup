@@ -1,0 +1,30 @@
+{
+  "name": "TIY-Mashup",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --directory --files='src/index.html, src/*/*.html, src/js/*/*.js, src/css/*/*.css'",
+    "sass": "none-sass src/scss/main.scss -o src/css/",
+    "postinstall": "npm run bower:install",
+    "bower:install": "bower install --save",
+    "postbower:install": "wiredep --src src/index.html"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sjoyal/TIY-Mashup.git"
+  },
+  "author": "Sean Joyal <sean.joyal@gmail.com>",
+  "license": "CC0",
+  "bugs": {
+    "url": "https://github.com/sjoyal/TIY-Mashup/issues"
+  },
+  "homepage": "https://github.com/sjoyal/TIY-Mashup",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "browser-sync": "^2.7.9",
+    "node-sass": "^3.2.0",
+    "wiredep": "^2.2.2"
+  }
+}

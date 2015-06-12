@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync start --server --directory --files='src/index.html, src/*/*.html, src/css/*/*.css'",
+    "start": "browser-sync start --server --directory --files='src/index.html, src/*/*.html, src/js/*/*.js, src/css/*/*.css'",
     "sass": "none-sass src/scss/main.scss -o src/css/",
     "postinstall": "npm run bower:install",
     "bower:install": "bower install --save",

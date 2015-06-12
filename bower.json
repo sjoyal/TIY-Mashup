@@ -1,0 +1,17 @@
+{
+  "name": "TIY-Mashup",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sjoyal/TIY-Mashup",
+  "authors": [
+    "Sean Joyal <sean.joyal@gmail.com>"
+  ],
+  "main": "src/index.html",
+  "license": "CC0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

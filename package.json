@@ -6,6 +6,7 @@
   "scripts": {
     "start": "browser-sync start --server --directory --files='src/index.html, src/*/*.html, src/css/*/*.css'",
     "sass": "none-sass src/scss/main.scss -o src/css/",
+    "postinstall": "npm run bower:install",
     "bower:install": "bower install --save",
     "postbower:install": "wiredep --src src/index.html"
 

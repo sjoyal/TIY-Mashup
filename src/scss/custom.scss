@@ -48,14 +48,61 @@ h3, p {
     @extend .unit-1;
     width: 100%;
     height: 240px;
+    float: right;
     border: 1px solid red;
+    &.offset-1 {
+      float: left;
+      }
+
+    h1 {
+      text-align: center;
+    }
+
     .inside {
       outline: 1px solid red;
       width: 33%;
-      height: 170px;
+      // height: 170px;
       float: left;
       padding: auto;
       margin: 0 auto;
+      color: white;
+      background: #2C2C2C;
+      background: rgba(0,0,0,0.5);
+
+      img {
+        width: 100%;
+      }
+
+      .temperature {
+        font-size: 6em;
+        font-weight: bold;
+
+        a {
+          text-decoration: none;
+          color: #86E68F;
+        }
+      }
+
+      .temp-active {
+        font-size: 3em;
+      }
+
+      .weather-stats {
+        display: none;
+      }
+
+      .daily-summary {
+        font-size: 1em;
+        text-align: center;
+      }
+
+      .rain-chance {
+        @extend .daily-summary;
+      }
+
+      .active {
+        display: block;
+      }
     }
   }
 
@@ -129,9 +176,9 @@ h3, p {
       height: 2.5em;
       line-height: 2.5em;
       width: 6.5em;
-      border: .2ex solid lightgray;
+      border: .2ex solid darkgray;
       border-radius: 5px;
-      background-color: lightgray;
+      background-color: darkgray;
       text-decoration: none;
       text-align: center;
       color: rgba(0,0,0,0.5);

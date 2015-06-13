@@ -1,3 +1,9 @@
+body {
+  background-image: url(https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/17/172/172341/hero-headers-vol-one-previews-1-o.jpg?1409261154);
+}
+h3, p {
+  color: purple;
+}
 .grid {
   $grid-width: 100%;
   $single-unit: ($grid-width/12);
@@ -8,6 +14,8 @@
   font-size: 1.5ex;
   font-family: sans-serif;
   width: 100%;
+  color: red;
+
 
 .unit-1 {
     float: left;
@@ -16,7 +24,7 @@
     padding-right: 1em;
     padding-left: 1em;
     border: .25ex solid darkgray;
-    background-color: lightgray;
+    background-color: transparentize($lightgrey, $50);
   }
   #google h1{
     font-size: 10%;

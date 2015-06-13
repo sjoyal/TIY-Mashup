@@ -7,8 +7,9 @@
   margin: .25em auto;
   font-size: 1.5ex;
   font-family: sans-serif;
+  width: 100%;
 
-  .unit-1 {
+.unit-1 {
     float: left;
     width: $single-unit;
     box-sizing: border-box;
@@ -17,13 +18,26 @@
     border: .25ex solid darkgray;
     background-color: lightgray;
   }
-
+  #google h1{
+    font-size: 10%;
+    position: relative;
+  }
   .unit-5 {
     @extend .unit-1;
     width: ($single-unit*5);
+    height: 240px;
+    float: right;
+    &.offset-1 {
+      float: left;
+      }
+    .inside {
+      outline: 1px solid red;
+      width: 33%;
+      height: 170px;
+      float: left;
+      padding: auto;
+      margin: 0 auto;
+    }
   }
 
-  .offset-1 {
-    margin-left: $single-unit;
-  }
 }

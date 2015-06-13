@@ -6,7 +6,6 @@
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!--bower:css-->
   <link rel="stylesheet" href="../bower_components/normalize.css/normalize.css" />
   <!--endbower-->
@@ -26,48 +25,53 @@
         life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. </p>
       <div class="grid">
         <section id="googlemap">
-          <div class="unit-5 offset-1" id="map">
+          <div class="unit-5" id="map">
             <div class="search">
               <input type="search" id="bar" placeholder="Search for things to do outdoors"></input>
             </div>
           </div>
-          <!--  <div id="google">
+          <div id="google">
             <h1>Powered by GOOGLE</h1>
-          </div>-->
-        </section>
-        <div class="unit-5" id="weather">
-          <h1>Three Day Weather Outlook</h1>
-          <div class="inside">
-            <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/17/172/172341/hero-headers-vol-one-previews-1-o.jpg?1409261154" height="110" width="110">
-            <div class="temperature">
-              <a href="#weather-stats1">{{forecast.temperatureMax}}°</a>
-            </div> <!--.temperature-->
-            <div class="weather-stats" id="weather-stats1">
-              <span class="daily-summary">{{forecast.summary}}</span>
-              <span class="rain-chance">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
-            </div> <!--.weather-stats-->
-          </div> <!--.inside-->
-          <div class="inside">
-            <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/17/172/172341/hero-headers-vol-one-previews-1-o.jpg?1409261154" height="110" width="110">
-            <div class="temperature">
-              <a href="#weather-stats2">{{forecast.temperatureMax}}°</a>
-            </div> <!--.temperature-->
-            <div class="weather-stats" id="weather-stats2">
-              <span class="daily-summary">{{forecast.summary}}</span>
-              <span class="rain-chance">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
-            </div> <!--.weather-stats-->
-          </div> <!--.inside-->
-          <div class="inside">
-            <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/17/172/172341/hero-headers-vol-one-previews-1-o.jpg?1409261154" height="110" width="110">
-            <div class="temperature">
-              <a href="#weather-stats3">{{forecast.temperatureMax}}°</a>
-            </div> <!--.temperature-->
-            <div class="weather-stats" id="weather-stats3">
-              <span class="daily-summary">{{forecast.summary}}</span>
-              <span class="rain-chance">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
-            </div> <!--.weather-stats-->
-          </div> <!--.inside-->
-        </div>
+          </div>
+        </section><!-- googlemap -->
+        <section id="darkforecast">
+          <div class="unit-5" id="weather">
+            <h1>Three Day Weather Outlook</h1>
+            <div class="inside">
+              <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/17/172/172341/hero-headers-vol-one-previews-1-o.jpg?1409261154" height="110" width="110">
+              <div class="temperature">
+                <a href="#weather-stats1">{{forecast.temperatureMax}}°</a>
+              </div> <!--.temperature-->
+              <div class="weather-stats" id="weather-stats1">
+                <span class="daily-summary">{{forecast.summary}}</span>
+                <span class="rain-chance">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
+              </div> <!--.weather-stats-->
+            </div> <!--.inside-->
+            <div class="inside">
+              <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/17/172/172341/hero-headers-vol-one-previews-1-o.jpg?1409261154" height="110" width="110">
+              <div class="temperature">
+                <a href="#weather-stats2">{{forecast.temperatureMax}}°</a>
+              </div> <!--.temperature-->
+              <div class="weather-stats" id="weather-stats2">
+                <span class="daily-summary">{{forecast.summary}}</span>
+                <span class="rain-chance">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
+              </div> <!--.weather-stats-->
+            </div> <!--.inside-->
+            <div class="inside">
+              <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/17/172/172341/hero-headers-vol-one-previews-1-o.jpg?1409261154" height="110" width="110">
+              <div class="temperature">
+                <a href="#weather-stats3">{{forecast.temperatureMax}}°</a>
+              </div> <!--.temperature-->
+              <div class="weather-stats" id="weather-stats3">
+                <span class="daily-summary">{{forecast.summary}}</span>
+                <span class="rain-chance">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
+              </div> <!--.weather-stats-->
+            </div> <!--.inside-->
+            <div id="forecast">
+              <h1>Powered by Forcast</h1>
+            </div> <!--#forecast-->
+          </div>
+        </section> <!--#darkforecast-->
       </div><!--.grid-->
       <footer class="footer-block">
         <div class="footer">

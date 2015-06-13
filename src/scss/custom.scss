@@ -25,12 +25,11 @@ h3, p {
   color: red;
 
   section {
-    width: ($single-unit*5);
-    height: 240px;
+    width: ($single-unit*6);
+    height: 360px;
     box-sizing: border-box;
     padding-right: 1em;
     padding-left: 1em;
-    border: .25ex solid blue;
     float: left;
     text-align: center;
   }

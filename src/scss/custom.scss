@@ -62,13 +62,56 @@ h3, p {
     &.offset-1 {
       float: left;
       }
+
+    h1 {
+      text-align: center;
+    }
+
     .inside {
       outline: 1px solid red;
       width: 33%;
-      height: 170px;
+      // height: 170px;
       float: left;
       padding: auto;
       margin: 0 auto;
+      color: white;
+      background: #2C2C2C;
+      background: rgba(0,0,0,0.5);
+
+      img {
+        width: 100%;
+      }
+
+      .temperature {
+        font-size: 6em;
+        font-weight: bold;
+
+        a {
+          text-decoration: none;
+          color: #86E68F;
+        }
+      }
+
+      .temp-active {
+        font-size: 3em;
+      }
+
+      .weather-stats {
+        display: none;
+      }
+
+      .daily-summary {
+        font-size: 1em;
+        text-align: center;
+      }
+
+      .rain-chance {
+        @extend .daily-summary;
+      }
+
+      .active {
+        display: block;
+      }
     }
   }
 

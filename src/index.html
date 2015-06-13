@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="../bower_components/normalize.css/normalize.css" />
   <!--endbower-->
   <link rel="stylesheet" href="css/main.css">
-  <!--bower:css-->
 </head>
   <body>
     <main>
@@ -41,9 +40,9 @@
           <div class="inside">
             <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/17/172/172341/hero-headers-vol-one-previews-1-o.jpg?1409261154" height="110" width="110">
             <div class="temperature">
-              <span>{{forecast.temperatureMax}}°</span>
+              <a href="#weather-stats1">{{forecast.temperatureMax}}°</a>
             </div> <!--.temperature-->
-            <div class="weather-stats">
+            <div class="weather-stats" id="weather-stats1">
               <span class="daily-summary">{{forecast.summary}}</span>
               <span class="rain-chance">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
             </div> <!--.weather-stats-->
@@ -51,9 +50,9 @@
           <div class="inside">
             <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/17/172/172341/hero-headers-vol-one-previews-1-o.jpg?1409261154" height="110" width="110">
             <div class="temperature">
-              <span>{{forecast.temperatureMax}}°</span>
+              <a href="#weather-stats2">{{forecast.temperatureMax}}°</a>
             </div> <!--.temperature-->
-            <div class="weather-stats">
+            <div class="weather-stats" id="weather-stats2">
               <span class="daily-summary">{{forecast.summary}}</span>
               <span class="rain-chance">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
             </div> <!--.weather-stats-->
@@ -61,9 +60,9 @@
           <div class="inside">
             <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/17/172/172341/hero-headers-vol-one-previews-1-o.jpg?1409261154" height="110" width="110">
             <div class="temperature">
-              <span>{{forecast.temperatureMax}}°</span>
+              <a href="#weather-stats3">{{forecast.temperatureMax}}°</a>
             </div> <!--.temperature-->
-            <div class="weather-stats">
+            <div class="weather-stats" id="weather-stats3">
               <span class="daily-summary">{{forecast.summary}}</span>
               <span class="rain-chance">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
             </div> <!--.weather-stats-->

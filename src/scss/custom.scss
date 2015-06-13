@@ -3,6 +3,8 @@ body {
 }
 h3, p {
   color: purple;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 .grid {
   $grid-width: 100%;
@@ -25,7 +27,7 @@ h3, p {
     box-sizing: border-box;
     padding-right: 1em;
     padding-left: 1em;
-    // border: .25ex solid darkgray;
+    border: .25ex solid darkgray;
     // background-color: lightgray;
   }
 
@@ -110,7 +112,7 @@ h3, p {
 
 .footer-block {
   @extend .header-block;
-  margin-top: 32.1em;
+  margin-top: 7.1em;
 
   .footer {
     line-height: 6.5em;

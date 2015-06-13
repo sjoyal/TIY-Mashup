@@ -95,4 +95,19 @@
 
   google.maps.event.addDomListener(window, 'load', initialize);
 
+  $.getJSON('../../api/forecast/orlando-forecast.json').then(function(forecast) {
+    console.log(forecast);
+
+    $temperature = $('a', '.temperature');
+    $temperature.text((forecast.daily.data[1].temperatureMax).toFixed() + '°');
+
+    $dailySummary = $('.daily-summary');
+    $dailySummary.text(forecast.daily.data[1].summary);
+
+    $rainChance = $('.rain-chance');
+    $rainChance.text((forecast.daily.data[1].precipProbability).toFixed() + '% chance of ' + (forecast.daily.data[1].precipType));
+
+
+  });
+
 })(window);

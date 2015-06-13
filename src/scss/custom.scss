@@ -1,0 +1,193 @@
+body {
+  background-image: url(https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/17/172/172341/hero-headers-vol-one-previews-1-o.jpg?1409261154);
+}
+h3, p {
+  color: purple;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+#google, #forecast {
+  float: left;
+  font-size: 10%;
+}
+.grid {
+  $grid-width: 100%;
+  $single-unit: ($grid-width/12);
+
+  width: $grid-width;
+  max-width: 90%;
+  @extend .clearfix;
+  // outline: .25ex solid lightgray;
+  margin: .25em auto;
+  font-size: 1.5ex;
+  font-family: sans-serif;
+  width: 100%;
+  color: red;
+
+  section {
+    width: ($single-unit*6);
+    height: 360px;
+    box-sizing: border-box;
+    padding-right: 1em;
+    padding-left: 1em;
+    float: left;
+    text-align: center;
+  }
+  .unit-1 {
+    box-sizing: border-box;
+    padding-right: 1em;
+    padding-left: 1em;
+    border: .25ex solid darkgray;
+    // background-color: lightgray;
+  }
+  #darkforecast {
+    float: right;
+  }
+  .unit-5 {
+    @extend .unit-1;
+    @extend .clearfix;
+    width: 100%;
+    height: 240px;
+    border: 1px solid red;
+    &.offset-1 {
+      // float: left;
+      }
+
+    h1 {
+      text-align: center;
+    }
+
+    .inside {
+      outline: 1px solid red;
+      width: 33%;
+      float: left;
+      padding: auto;
+      margin: 0 auto;
+      color: white;
+      background: #2C2C2C;
+      background: rgba(0,0,0,0.5);
+
+      img {
+        width: 100%;
+      }
+
+      .temperature {
+        font-size: 6em;
+        font-weight: bold;
+
+        a {
+          text-decoration: none;
+          color: #86E68F;
+        }
+      }
+
+      .temp-active {
+        font-size: 3em;
+      }
+
+      .weather-stats {
+        display: none;
+      }
+
+      .daily-summary {
+        font-size: 1em;
+        text-align: center;
+      }
+
+      .rain-chance {
+        @extend .daily-summary;
+      }
+
+      .active {
+        display: block;
+      }
+    }
+  }
+
+  .offset-1 {
+    margin-left: $single-unit;
+  }
+
+  .offset-2 {
+    margin-left: ($single-unit*2);
+  }
+
+  .offset-4 {
+    margin-left: ($single-unit*4);
+  }
+
+}
+// Sean stuff
+.header-block {
+  width: 100%;
+  height: 5em;
+  background: #2C2C2C;
+  background: rgba(0,0,0,0.5);
+
+  img {
+    display: inline-block;
+    padding-top: 1.25ex;
+    padding-left: .5em;
+  }
+
+  h1 {
+    display: inline-block;
+    font-family: century;
+    font-weight: 600;
+    font-size: 2.5em;
+    color: white;
+    margin: 0;
+    padding-left: 0.25em;
+    vertical-align: middle;
+  }
+}
+
+.footer-block {
+  @extend .header-block;
+  margin-top: 7.1em;
+
+  .footer {
+    line-height: 6.5em;
+    font-weight: 200;
+    font-size: 1.5ex;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+
+    .copyright {
+      display: inline-block;
+      // width: 33%;
+    }
+
+    .links {
+      display: inline-block;
+      // width: 33%;
+    }
+
+    #project-email {
+      display: inline-block;
+      margin-left: .5em;
+      height: 2.5em;
+      line-height: 2.5em;
+      width: 6.5em;
+      border: .2ex solid darkgray;
+      border-radius: 5px;
+      background-color: darkgray;
+      text-decoration: none;
+      text-align: center;
+      color: rgba(0,0,0,0.5);
+      font-weight: 400;
+    }
+
+    #project-email:hover {
+      background-color: white;
+      border: .2ex solid white;
+    }
+
+    #github-link {
+      @extend #project-email;
+      width: 5em;
+    }
+  }
+}

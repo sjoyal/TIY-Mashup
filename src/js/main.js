@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* What do we need to put in to for g-map?
  *
  */
@@ -84,3 +85,19 @@
 google.maps.event.addDomListener(window, 'load', initialize);
 
  })(window);
+=======
+(function(window){
+
+  $temperature = $('.temperature');
+  /** What event are we looking for? 'click'
+    * Where are we looking for the event? '.temperature'
+    * What happens after the click:
+    */
+  $temperature.click(function(event){
+    event.preventDefault();
+    $(this).toggleClass('temp-active');
+    $($('a', this).attr("href")).toggleClass('active');
+  });
+
+})(window);
+>>>>>>> develop

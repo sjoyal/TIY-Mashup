@@ -40,8 +40,6 @@
     display: inline-block;
     padding-top: 1.25ex;
     padding-left: .5em;
-
-
   }
 
   h1 {
@@ -54,5 +52,9 @@
     padding-left: 0.25em;
     vertical-align: middle;
   }
+}
 
+.footer-block {
+  @extend .header-block;
+  margin-top: 29.1em;
 }

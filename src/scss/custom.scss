@@ -5,7 +5,7 @@
   width: $grid-width;
   max-width: 90%;
   @extend .clearfix;
-  outline: .25ex solid lightgray;
+  // outline: .25ex solid lightgray;
   margin: .25em auto;
   font-size: 1.5ex;
   font-family: sans-serif;
@@ -16,8 +16,26 @@
     box-sizing: border-box;
     padding-right: 1em;
     padding-left: 1em;
-    border: .25ex solid darkgray;
-    background-color: lightgray;
+    // border: .25ex solid darkgray;
+    // background-color: lightgray;
+  }
+
+  .unit-2 {
+    @extend .unit-1;
+    float: left;
+    width: ($single-unit*2);
+  }
+
+  .unit-3 {
+    @extend .unit-1;
+    float: left;
+    width: ($single-unit*3);
+  }
+
+  .unit-4 {
+    @extend .unit-1;
+    float: left;
+    width: ($single-unit*4);
   }
 
   .unit-5 {
@@ -28,6 +46,15 @@
   .offset-1 {
     margin-left: $single-unit;
   }
+
+  .offset-2 {
+    margin-left: ($single-unit*2);
+  }
+
+  .offset-4 {
+    margin-left: ($single-unit*4);
+  }
+
 }
 
 .header-block {
@@ -40,8 +67,6 @@
     display: inline-block;
     padding-top: 1.25ex;
     padding-left: .5em;
-
-
   }
 
   h1 {
@@ -54,5 +79,50 @@
     padding-left: 0.25em;
     vertical-align: middle;
   }
+}
 
+.footer-block {
+  @extend .header-block;
+  margin-top: 32.1em;
+
+  .footer {
+    line-height: 6.5em;
+    font-weight: 200;
+    font-size: 1.5ex;
+    color: white;
+    text-align: center;
+
+    .copyright {
+      display: inline-block;
+    }
+
+    .links {
+      display: inline-block;
+    }
+
+    #project-email {
+      display: inline-block;
+      margin-left: .5em;
+      height: 2.5em;
+      line-height: 2.5em;
+      width: 6.5em;
+      border: .2ex solid lightgray;
+      border-radius: 5px;
+      background-color: lightgray;
+      text-decoration: none;
+      text-align: center;
+      color: rgba(0,0,0,0.5);
+      font-weight: 400;
+    }
+
+    #project-email:hover {
+      background-color: white;
+      border: .2ex solid white;
+    }
+
+    #github-link {
+      @extend #project-email;
+      width: 5em;
+    }
+  }
 }

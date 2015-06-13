@@ -1,0 +1,58 @@
+.grid {
+  $grid-width: 100%;
+  $single-unit: ($grid-width/12);
+
+  width: $grid-width;
+  max-width: 90%;
+  @extend .clearfix;
+  outline: .25ex solid lightgray;
+  margin: .25em auto;
+  font-size: 1.5ex;
+  font-family: sans-serif;
+
+  .unit-1 {
+    float: left;
+    width: $single-unit;
+    box-sizing: border-box;
+    padding-right: 1em;
+    padding-left: 1em;
+    border: .25ex solid darkgray;
+    background-color: lightgray;
+  }
+
+  .unit-5 {
+    @extend .unit-1;
+    width: ($single-unit*5);
+  }
+
+  .offset-1 {
+    margin-left: $single-unit;
+  }
+}
+
+.header-block {
+  width: 100%;
+  height: 5em;
+  background: #2C2C2C;
+  background: rgba(0,0,0,0.5);
+
+  img {
+    display: inline-block;
+    padding-top: 1.25ex;
+    padding-left: .5em;
+
+
+  }
+
+  h1 {
+    display: inline-block;
+    font-family: century;
+    font-weight: 600;
+    font-size: 2.5em;
+    color: white;
+    margin: 0;
+    padding-left: 0.25em;
+    vertical-align: middle;
+  }
+
+}

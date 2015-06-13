@@ -1,3 +1,11 @@
+body {
+  background-image: url(https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/17/172/172341/hero-headers-vol-one-previews-1-o.jpg?1409261154);
+}
+h3, p {
+  color: purple;
+  padding-left: 1em;
+  padding-right: 1em;
+}
 .grid {
   $grid-width: 100%;
   $single-unit: ($grid-width/12);
@@ -9,14 +17,17 @@
   margin: .25em auto;
   font-size: 1.5ex;
   font-family: sans-serif;
+  width: 100%;
+  color: red;
 
-  .unit-1 {
+
+.unit-1 {
     float: left;
     width: $single-unit;
     box-sizing: border-box;
     padding-right: 1em;
     padding-left: 1em;
-    // border: .25ex solid darkgray;
+    border: .25ex solid darkgray;
     // background-color: lightgray;
   }
 
@@ -36,11 +47,29 @@
     @extend .unit-1;
     float: left;
     width: ($single-unit*4);
+    border: .25ex solid darkgray;
+    background-color: lightgrey;
   }
-
+  #google h1{
+    font-size: 10%;
+    position: relative;
+  }
   .unit-5 {
     @extend .unit-1;
     width: ($single-unit*5);
+    height: 240px;
+    float: right;
+    &.offset-1 {
+      float: left;
+      }
+    .inside {
+      outline: 1px solid red;
+      width: 33%;
+      height: 170px;
+      float: left;
+      padding: auto;
+      margin: 0 auto;
+    }
   }
 
   .offset-1 {
@@ -83,7 +112,7 @@
 
 .footer-block {
   @extend .header-block;
-  margin-top: 32.1em;
+  margin-top: 7.1em;
 
   .footer {
     line-height: 6.5em;

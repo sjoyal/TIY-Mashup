@@ -1,7 +1,11 @@
 body {
-  background-image: url(https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/17/172/172341/hero-headers-vol-one-previews-1-o.jpg?1409261154);
+  background-image: url(../../specs/41H.jpg);
+  background-size: 100%;
+
 }
 h3, p {
+  padding-left: 2.5em;
+  padding-right: 2.5em;
   color: #846431;
   text-align: center;
 }
@@ -126,7 +130,7 @@ h3, p {
   }
 
 }
-// Sean stuff
+
 .header-block {
   width: 100%;
   height: 5em;

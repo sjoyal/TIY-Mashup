@@ -3,12 +3,16 @@ body {
 }
 h3, p {
   color: purple;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  text-align: center;
 }
 #google, #forecast {
   float: left;
   font-size: 10%;
+  font-family: sans-serif;
+  color: #2C2C2C;
+  color: rgba(0,0,0,0.5);
 }
 .grid {
   $grid-width: 100%;
@@ -37,7 +41,9 @@ h3, p {
     box-sizing: border-box;
     padding-right: 1em;
     padding-left: 1em;
-    border: .25ex solid darkgray;
+    background: #2C2C2C;
+    background: rgba(0,0,0,0.5);
+    // border: .25ex solid darkgray;
     // background-color: lightgray;
   }
   #darkforecast {
@@ -47,42 +53,42 @@ h3, p {
     @extend .unit-1;
     @extend .clearfix;
     width: 100%;
-    height: 240px;
-    border: 1px solid red;
+    height: 360px;
+    // border: 1px solid red;
     &.offset-1 {
-      // float: left;
       }
 
     h1 {
       text-align: center;
+      font-family: century;
+      color: white;
     }
 
     .inside {
-      outline: 1px solid red;
-      width: 33%;
+      // outline: 1px solid white;
+      width: 30%;
+      height: 289px;
       float: left;
       padding: auto;
-      margin: 0 auto;
+      margin: 0 1.25ex;
       color: white;
-      background: #2C2C2C;
-      background: rgba(0,0,0,0.5);
 
       img {
         width: 100%;
       }
 
       .temperature {
-        font-size: 6em;
-        font-weight: bold;
+        font-size: 8em;
+        font-weight: normal;
 
         a {
           text-decoration: none;
-          color: #86E68F;
+          color: white;
         }
       }
 
       .temp-active {
-        font-size: 3em;
+        font-size: 4.5em;
       }
 
       .weather-stats {
@@ -90,12 +96,17 @@ h3, p {
       }
 
       .daily-summary {
-        font-size: 1em;
+        display: block;
+        height: 4.25em;
+        font-size: 1.1em;
         text-align: center;
+        padding: .5ex;
       }
 
       .rain-chance {
         @extend .daily-summary;
+        font-style: italic;
+        font-size: .75em;
       }
 
       .active {
@@ -144,7 +155,7 @@ h3, p {
 
 .footer-block {
   @extend .header-block;
-  margin-top: 7.1em;
+  margin-top: 4.75em;
 
   .footer {
     line-height: 6.5em;
@@ -181,8 +192,8 @@ h3, p {
     }
 
     #project-email:hover {
-      background-color: white;
-      border: .2ex solid white;
+      background-color: #86E68F;
+      border: .2ex solid #86E68F;
     }
 
     #github-link {

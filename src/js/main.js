@@ -95,18 +95,38 @@
 
   google.maps.event.addDomListener(window, 'load', initialize);
 
-  $.getJSON('../../api/forecast/orlando-forecast.json').then(function(forecast) {
+  $.getJSON('../../api/forecast/forecast-data.json').then(function(forecast) {
     console.log(forecast);
 
-    $temperature = $('a', '.temperature');
-    $temperature.text((forecast.daily.data[1].temperatureMax).toFixed() + '°');
+    // day 1 forecast
+    $temperature1 = $('a', '#temperature1');
+    $temperature1.text((forecast.daily.data[2].temperatureMax).toFixed());
 
-    $dailySummary = $('.daily-summary');
-    $dailySummary.text(forecast.daily.data[1].summary);
+    $dailySummary1 = $('#daily-summary1');
+    $dailySummary1.text(forecast.daily.data[2].summary);
 
-    $rainChance = $('.rain-chance');
-    $rainChance.text((forecast.daily.data[1].precipProbability).toFixed() + '% chance of ' + (forecast.daily.data[1].precipType));
+    $rainChance1 = $('#rain-chance1');
+    $rainChance1.text((forecast.daily.data[2].precipProbability).toFixed() + '% chance of ' + (forecast.daily.data[2].precipType));
 
+    // day 2 forecast
+    $temperature2 = $('a', '#temperature2');
+    $temperature2.text((forecast.daily.data[3].temperatureMax).toFixed());
+
+    $dailySummary2 = $('#daily-summary2');
+    $dailySummary2.text(forecast.daily.data[3].summary);
+
+    $rainChance2 = $('#rain-chance2');
+    $rainChance2.text((forecast.daily.data[3].precipProbability).toFixed() + '% chance of ' + (forecast.daily.data[3].precipType));
+
+    // day 3 forecast
+    $temperature3 = $('a', '#temperature3');
+    $temperature3.text((forecast.daily.data[4].temperatureMax).toFixed());
+
+    $dailySummary3 = $('#daily-summary3');
+    $dailySummary3.text(forecast.daily.data[4].summary);
+
+    $rainChance3 = $('#rain-chance3');
+    $rainChance3.text((forecast.daily.data[4].precipProbability).toFixed() + '% chance of ' + (forecast.daily.data[4].precipType));
 
   });
 

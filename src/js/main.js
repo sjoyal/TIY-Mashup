@@ -15,6 +15,7 @@
 /** What do we need to put in to for g-map?
   *
   */
+  // Google Places API
   function initialize() {
     var mapOptions = {
       center: new google.maps.LatLng(28.5558, (360-81.3989)),
@@ -95,6 +96,8 @@
 
   google.maps.event.addDomListener(window, 'load', initialize);
 
+
+// forecast API
   $.getJSON('../../api/forecast/forecast-data.json').then(function(forecast) {
     console.log(forecast);
 

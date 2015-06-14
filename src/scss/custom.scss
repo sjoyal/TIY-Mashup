@@ -5,11 +5,12 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-h3, p {
+p {
   padding-left: 2.5em;
   padding-right: 2.5em;
   color: #846431;
   text-align: center;
+  font-size: 1.5ex;
 }
 #google, #forecast {
   float: left;
@@ -52,15 +53,12 @@ h3, p {
   }
   #darkforecast {
     float: right;
-  }
+
   .unit-5 {
     @extend .unit-1;
     @extend .clearfix;
     width: 100%;
     height: 360px;
-    // border: 1px solid red;
-    &.offset-1 {
-      }
 
     h1 {
       text-align: center;
@@ -102,14 +100,15 @@ h3, p {
 
       .daily-summary {
         display: block;
-        height: 4.25em;
-        font-size: 1.1em;
+        height: 6.5em;
+        font-size: .75em;
         text-align: center;
         padding: .5ex;
       }
 
       .rain-chance {
         @extend .daily-summary;
+        // padding: 1em;
         font-style: italic;
         font-size: .75em;
       }
@@ -119,7 +118,7 @@ h3, p {
       }
     }
   }
-
+}
   .offset-1 {
     margin-left: $single-unit;
   }
@@ -161,6 +160,9 @@ h3, p {
 .footer-block {
   @extend .header-block;
   margin-top: 4.75em;
+  // position: absolute;
+  // left: 0;
+  // bottom: 0;
 
   .footer {
     line-height: 6.5em;
@@ -204,6 +206,45 @@ h3, p {
     #github-link {
       @extend #project-email;
       width: 5em;
+    }
+  }
+}
+@media screen and (max-width: 55em){
+  .grid section {
+    width: 100%;
+    float: none;
+    .unit-5 {
+      .inside {
+        .weather-stats {
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 35em){
+  .grid {
+    #darkforecast {
+      .unit-5 {
+        h1 {
+          font-size: 1.6em;
+        }
+        .inside {
+          .weather-stats {
+            .daily-summary {
+              height: 10em;
+            }
+          }
+          img {
+            height: 17ex;
+          }
+        }
+      }
+    }
+  }
+  .footer-block {
+
+    .footer {
+      line-height: 2.5em;
     }
   }
 }

@@ -15,6 +15,7 @@
 /** What do we need to put in to for g-map?
   *
   */
+  // Google Places API
   function initialize() {
     var mapOptions = {
       center: new google.maps.LatLng(28.5558, (360-81.3989)),
@@ -95,12 +96,14 @@
 
   google.maps.event.addDomListener(window, 'load', initialize);
 
+
+// forecast API
   $.getJSON('../../api/forecast/forecast-data.json').then(function(forecast) {
     console.log(forecast);
 
     // day 1 forecast
     $temperature1 = $('a', '#temperature1');
-    $temperature1.text((forecast.daily.data[2].temperatureMax).toFixed() + '°');
+    $temperature1.text((forecast.daily.data[2].temperatureMax).toFixed());
 
     $dailySummary1 = $('#daily-summary1');
     $dailySummary1.text(forecast.daily.data[2].summary);
@@ -110,7 +113,7 @@
 
     // day 2 forecast
     $temperature2 = $('a', '#temperature2');
-    $temperature2.text((forecast.daily.data[3].temperatureMax).toFixed() + '°');
+    $temperature2.text((forecast.daily.data[3].temperatureMax).toFixed());
 
     $dailySummary2 = $('#daily-summary2');
     $dailySummary2.text(forecast.daily.data[3].summary);
@@ -120,7 +123,7 @@
 
     // day 3 forecast
     $temperature3 = $('a', '#temperature3');
-    $temperature3.text((forecast.daily.data[4].temperatureMax).toFixed() + '°');
+    $temperature3.text((forecast.daily.data[4].temperatureMax).toFixed());
 
     $dailySummary3 = $('#daily-summary3');
     $dailySummary3.text(forecast.daily.data[4].summary);

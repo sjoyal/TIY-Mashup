@@ -1,32 +1,111 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Explore Outdoors</title>
+    <style>
+    </style>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/explore_outdoors_icon.ico" type="image/x-icon">
+    <!--bower:css-->
+    <link rel="stylesheet" href="../bower_components/normalize.css/normalize.css" />
+    <!--endbower-->
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="header-block">
+          <img src="img/explore_outdoors_icon.png" alt="logo" width="40" height="57">
+          <h1>.explore outdoors</h1>
+        </div> <!--.header-block-->
+      </header>
+      <h3></h3>
+      <p>Explore Outdoors is a site dedicated to encouraging people to get outdoors and adventure around Orlando, FL. Research outdoor attractions and check the upcoming weather forecast before you head out. Search for outdoor attractions directly using the google places window below.</p>
+      <div class="grid">
+        <section id="googlemap">
+          <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+          <div id="type-selector" class="controls">
+            <input type="radio" name="type" id="changetype-all" checked="checked">
+            <label for="changetype-all">All</label>
 
-        <!--bower:css-->
-        <link rel="stylesheet" href="../bower_components/normalize.css/normalize.css" />
-        <!--endbower-->
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-      <main class="grid">
-        <nav class="tabs unit-12">We gonna build something outchea</nav>
-      </main> <!--.grid-->
-        <!--bower:js-->
-        <script src="../bower_components/jquery/dist/jquery.js"></script>
-        <script src="../bower_components/modernizr/modernizr.js"></script>
-        <script src="../bower_components/lodash/lodash.js"></script>
-        <!--endbower-->
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+            <input type="radio" name="type" id="changetype-establishment">
+            <label for="changetype-establishment">Establishments</label>
+
+            <input type="radio" name="type" id="changetype-address">
+            <label for="changetype-address">Addresses</label>
+
+            <input type="radio" name="type" id="changetype-geocode">
+            <label for="changetype-geocode">Geocodes</label>
+          </div> <!--.controls-->
+          <div id="map-canvas"></div>
+          <div id="google">
+            <h1>Powered by GOOGLE</h1>
+          </div> <!--#google-->
+        </section> <!--#googlemap-->
+        <section id="darkforecast">
+          <div class="unit-5" id="weather">
+            <h1>Three Day Weather Outlook</h1>
+            <div class="inside">
+              <img src="img/partly-cloudy.png" height="130" width="110">
+              <div class="temperature" id="temperature1">
+                <a href="#weather-stats1">{{forecast.temperatureMax}}</a><span>°</span>
+              </div> <!--.temperature-->
+              <div class="weather-stats" id="weather-stats1">
+                <span class="daily-summary" id="daily-summary1">{{forecast.summary}}</span>
+                <span class="rain-chance" id="rain-chance1">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
+              </div> <!--.weather-stats-->
+            </div> <!--.inside-->
+            <div class="inside">
+              <img src="img/cloudy.png" height="130" width="110">
+              <div class="temperature" id="temperature2">
+                <a href="#weather-stats2">{{forecast.temperatureMax}}</a><span>°</span>
+              </div> <!--.temperature-->
+              <div class="weather-stats" id="weather-stats2">
+                <span class="daily-summary" id="daily-summary2">{{forecast.summary}}</span>
+                <span class="rain-chance" id="rain-chance2">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
+              </div> <!--.weather-stats-->
+            </div> <!--.inside-->
+            <div class="inside">
+              <img src="img/partly-cloudy.png" height="130" width="110">
+              <div class="temperature" id="temperature3">
+                <a href="#weather-stats3">{{forecast.temperatureMax}}</a><span>°</span>
+              </div> <!--.temperature-->
+              <div class="weather-stats" id="weather-stats3">
+                <span class="daily-summary" id="daily-summary3">{{forecast.summary}}</span>
+                <span class="rain-chance" id="rain-chance3">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
+              </div> <!--.weather-stats-->
+            </div> <!--.inside-->
+          </div> <!--#weather-->
+          <div class="forecast">
+            <h1 id="forecast">Powered by Forcast</h1>
+          </div> <!--#forecast-->
+        </section> <!--#darkforecast-->
+      </div><!--.grid-->
+      <footer class="footer-block">
+        <div class="footer">
+          <div class="copyright">
+            <span class=>©2015 MSJ Develops. All rights reserved.</span>
+          </div> <!--.copywright-->
+          <div class="links">
+            <a id="project-email" href="mailto:msj.develops@gmail.com">Contact Us</a>
+            <a id="github-link" href="https://github.com/sjoyal/TIY-Mashup">GitHub</a>
+          </div> <!--.links-->
+        </div> <!--.footer-->
+      </footer> <!--.footer-block-->
+    </main>
+    <!--bower:js-->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <script src="../bower_components/lodash/lodash.js"></script>
+    <!--endbower-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+    <script>
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

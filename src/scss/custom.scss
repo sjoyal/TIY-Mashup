@@ -246,6 +246,14 @@ p {
 
     .footer {
       line-height: 2.5em;
+
+      .copyright {
+        display: block;
+      }
+
+      .links {
+        display: block;
+      }
     }
   }
 }

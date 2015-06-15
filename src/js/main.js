@@ -8,6 +8,7 @@
   $temperature.click(function(event){
     event.preventDefault();
     $(this).toggleClass('temp-active');
+    $('.date-info', this).toggleClass('clicked');
     $($('a', this).attr("href")).toggleClass('active');
   });
 
@@ -105,6 +106,10 @@
     $temperature1 = $('a', '#temperature1');
     $temperature1.text((forecast.daily.data[2].temperatureMax).toFixed());
 
+    $day1 = $('#day1');
+    var dayOneDate = new Date(1000*forecast.daily.data[2].time);
+    $day1.text(dateConvert(dayOneDate));
+
     $dailySummary1 = $('#daily-summary1');
     $dailySummary1.text(forecast.daily.data[2].summary);
 
@@ -114,6 +119,10 @@
     // day 2 forecast
     $temperature2 = $('a', '#temperature2');
     $temperature2.text((forecast.daily.data[3].temperatureMax).toFixed());
+
+    $day2 = $('#day2');
+    var dayTwoDate = new Date(1000*forecast.daily.data[3].time);
+    $day2.text(dateConvert(dayTwoDate));
 
     $dailySummary2 = $('#daily-summary2');
     $dailySummary2.text(forecast.daily.data[3].summary);
@@ -125,6 +134,10 @@
     $temperature3 = $('a', '#temperature3');
     $temperature3.text((forecast.daily.data[4].temperatureMax).toFixed());
 
+    $day3 = $('#day3');
+    var dayThreeDate = new Date(1000*forecast.daily.data[4].time);
+    $day3.text(dateConvert(dayThreeDate));
+
     $dailySummary3 = $('#daily-summary3');
     $dailySummary3.text(forecast.daily.data[4].summary);
 
@@ -132,5 +145,17 @@
     $rainChance3.text((forecast.daily.data[4].precipProbability).toFixed() + '% chance of ' + (forecast.daily.data[4].precipType));
 
   });
+
+  function dateConvert(dateobj) {
+    var year = dateobj.getFullYear();
+    var month = dateobj.getMonth();
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+    var date = dateobj.getDate();
+    var day = dateobj.getDay();
+    var dayName = ['Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
+    var convertedDate = (dayName[day] + ' ' + months[month] + ' ' + date + ', ' + year).toString();
+
+    return convertedDate;
+  };
 
 })(window);

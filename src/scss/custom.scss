@@ -109,7 +109,7 @@ p {
         }
 
         .temp-active {
-          font-size: 3em;
+          font-size: .75em;
         }
 
         .weather-stats {
@@ -118,7 +118,7 @@ p {
 
         .daily-summary {
           display: block;
-          height: 6.5em;
+          height: 3.75em;
           font-size: .75em;
           text-align: center;
           padding: .5ex;
@@ -128,7 +128,6 @@ p {
           @extend .daily-summary;
           // padding: 1em;
           font-style: italic;
-          font-size: .75em;
         }
 
         .active {
@@ -250,7 +249,7 @@ p {
         .inside {
           .weather-stats {
             .daily-summary {
-              height: 10em;
+              height: 7em;
             }
           }
           img {

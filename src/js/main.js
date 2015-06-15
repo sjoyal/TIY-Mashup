@@ -1,18 +1,5 @@
 (function(window){
 
-  $temperature = $('.temperature');
-  /** What event are we looking for? 'click'
-    * Where are we looking for the event? '.temperature'
-    * What happens after the click:
-    */
-  $temperature.click(function(event){
-    event.preventDefault();
-    $(this).toggleClass('temp-active');
-    $('.date-info', this).toggleClass('clicked');
-    $($('a', this).attr("href")).toggleClass('active');
-  });
-
-
 /** What do we need to put in to for g-map?
   *
   */
@@ -100,21 +87,35 @@
 
 // forecast API
   $.getJSON('../../api/forecast/forecast-data.json').then(function(forecast) {
-    console.log(forecast);
 
-    // day 1 forecast
+    // var newForecast = [ ];
+    // for (i = 0; i < 3; i++) {
+    //   newForecast.push(forecast.daily.data[i]);
+    // };
+    //
+    // _.forEach(newForecast, function(){
+    //   var $templateData = $('#getting-weird').clone().html();
+    //   $templateData.find('a', '.temperature').text((newForecast.temperatureMAX).toFixed());
+    //   $templateData.find('.daily-summary').text(newForecast.summary);
+    //   $templateData.find('.rain-chance').text((newForecast[0].precipProbability).toFixed() + '% chance of ' + (newForecast[0].precipType));
+    //   var eachDate = new Date(1000*newForecast.time);
+    //   $templateData.find('.day').text(dateConvert(eachDate));
+    //   $('.inside').append($templateData);
+    // });
+    // I hate templates.....
+
     $temperature1 = $('a', '#temperature1');
     $temperature1.text((forecast.daily.data[2].temperatureMax).toFixed());
-
-    $day1 = $('#day1');
-    var dayOneDate = new Date(1000*forecast.daily.data[2].time);
-    $day1.text(dateConvert(dayOneDate));
 
     $dailySummary1 = $('#daily-summary1');
     $dailySummary1.text(forecast.daily.data[2].summary);
 
     $rainChance1 = $('#rain-chance1');
     $rainChance1.text((forecast.daily.data[2].precipProbability).toFixed() + '% chance of ' + (forecast.daily.data[2].precipType));
+
+    $day1 = $('#day1');
+    var dayOneDate = new Date(1000*(forecast.daily.data[2].time));
+    $day1.text(dateConvert(dayOneDate));
 
     // day 2 forecast
     $temperature2 = $('a', '#temperature2');
@@ -157,5 +158,18 @@
 
     return convertedDate;
   };
+
+  $('.inside')
+  /** What event are we looking for? 'click'
+    * Where are we looking for the event? '.temperature'
+    * What happens after the click:
+    */
+    .on('click', 'div', (function(event){
+      event.preventDefault();
+      $('a', this).toggleClass('temp-active');
+      $('.date-info', this).toggleClass('clicked');
+      $($('a', this).attr("href")).toggleClass('active');
+    }));
+
 
 })(window);

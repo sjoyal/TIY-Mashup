@@ -54,18 +54,18 @@
       <section id="darkforecast">
         <div class="unit-5" id="weather">
           <h1>Three Day Weather Outlook</h1>
-          <div class="inside">
+          <div id="inside1" class="inside">
             <img src="img/partly-cloudy.png">
             <div class="temperature" id="temperature1">
-              <a href="#weather-stats1">{{forecast.temperatureMax}}</a>
+              <a href="#weather-stats1">${forecast.daily.data[2].temperatureMax}</a>
               <div class="date-info">
                 <div id="day1" class="day">{{forecast.time}}</div>
                 <div class="details-link">Click here for more info</div>
               </div> <!--.date-info-->
             </div> <!--.temperature-->
             <div class="weather-stats" id="weather-stats1">
-              <span class="daily-summary" id="daily-summary1">{{forecast.summary}}</span>
-              <span class="rain-chance" id="rain-chance1">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
+              <span class="daily-summary" id="daily-summary1">${forecast.daily.data[2].summary}</span>
+              <span class="rain-chance" id="rain-chance1">${forecast.daily.data[2].precipProbability} % chance of ${forecast.daily.data[2].precipType}</span>
             </div> <!--.weather-stats-->
           </div> <!--.inside-->
           <div class="inside">

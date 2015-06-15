@@ -26,7 +26,6 @@ p {
   width: $grid-width;
   max-width: 90%;
   @extend .clearfix;
-  // outline: .25ex solid lightgray;
   margin: .25em auto;
   font-size: 1.5ex;
   font-family: sans-serif;
@@ -48,8 +47,6 @@ p {
     padding-left: 1em;
     background: #2C2C2C;
     background: rgba(0,0,0,0.5);
-    // border: .25ex solid darkgray;
-    // background-color: lightgray;
   }
   #darkforecast {
     float: right;
@@ -66,15 +63,14 @@ p {
         color: white;
       }
 
-      .inside {
-        // outline: 1px solid white;
-        width: 33.33%;
-        height: 289px;
-        float: left;
-        box-sizing: border-box;
-        padding: 0 .25em;
-        color: white;
-        text-align: center;
+    .inside {
+      width: 33.33%;
+      height: 289px;
+      float: left;
+      box-sizing: border-box;
+      padding: 0 .25em;
+      color: white;
+      text-align: center;
 
         img {
           width: 80%;

@@ -23,12 +23,10 @@
       <div class="header-block">
         <img src="img/explore_outdoors_icon.png" alt="logo" width="40" height="57">
         <h1>.explore outdoors</h1>
-      </div>
-      <!--.header-block-->
+      </div> <!--.header-block-->
     </header>
     <h3></h3>
-    <p>Explore Outdoors is a site dedicated to encouraging people to get outdoors and adventure around Orlando, FL. Research outdoor attractions and check the upcoming weather forecast before you head out. Search for outdoor attractions directly using the
-      google places window below.</p>
+    <p>Explore Outdoors is a site dedicated to encouraging people to get outdoors and adventure around Orlando, FL. Research outdoor attractions and check the upcoming weather forecast before you head out. To search, use the google places window included below.</p>
     <div class="grid">
       <section id="googlemap">
         <input id="pac-input" class="controls" type="text" placeholder="Search for an outdoor activity">
@@ -60,66 +58,61 @@
             <img src="img/partly-cloudy.png">
             <div class="temperature" id="temperature1">
               <a href="#weather-stats1">{{forecast.temperatureMax}}</a>
-            </div>
-            <!--.temperature-->
+              <div class="date-info">
+                <div id="day1" class="day">{{forecast.time}}</div>
+                <div class="details-link">Click here for more info</div>
+              </div> <!--.date-info-->
+            </div> <!--.temperature-->
             <div class="weather-stats" id="weather-stats1">
               <span class="daily-summary" id="daily-summary1">{{forecast.summary}}</span>
               <span class="rain-chance" id="rain-chance1">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
-            </div>
-            <!--.weather-stats-->
-          </div>
-          <!--.inside-->
+            </div> <!--.weather-stats-->
+          </div> <!--.inside-->
           <div class="inside">
             <img src="img/cloudy.png">
             <div class="temperature" id="temperature2">
               <a href="#weather-stats2">{{forecast.temperatureMax}}</a>
-            </div>
-            <!--.temperature-->
+              <div class="date-info">
+                <div id="day2" class="day">June 16</div>
+                <div class="details-link">Click here for more info</div>
+              </div> <!--.date-info-->
+            </div> <!--.temperature-->
             <div class="weather-stats" id="weather-stats2">
               <span class="daily-summary" id="daily-summary2">{{forecast.summary}}</span>
               <span class="rain-chance" id="rain-chance2">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
-            </div>
-            <!--.weather-stats-->
-          </div>
-          <!--.inside-->
+            </div> <!--.weather-stats-->
+          </div> <!--.inside-->
           <div class="inside">
             <img src="img/partly-cloudy.png">
             <div class="temperature" id="temperature3">
               <a href="#weather-stats3">{{forecast.temperatureMax}}</a>
-            </div>
-            <!--.temperature-->
+              <div class="date-info">
+                <div id="day3" class="day">June 17</div>
+                <div class="details-link">Click here for more info</div>
+              </div> <!--.date-info-->
+            </div> <!--.temperature-->
             <div class="weather-stats" id="weather-stats3">
               <span class="daily-summary" id="daily-summary3">{{forecast.summary}}</span>
               <span class="rain-chance" id="rain-chance3">{{forecast.precipProbability}} % chance of {{forecast.precipType}}</span>
-            </div>
-            <!--.weather-stats-->
-          </div>
-          <!--.inside-->
-        </div>
-        <!--#weather-->
+            </div> <!--.weather-stats-->
+          </div> <!--.inside-->
+        </div> <!--#weather-->
         <div class="forecast">
           <h1 id="forecast">Powered by Forcast</h1>
-        </div>
-        <!--#forecast-->
-      </section>
-      <!--#darkforecast-->
-    </div>
-    <!--.grid-->
+        </div> <!--#forecast-->
+      </section> <!--#darkforecast-->
+    </div> <!--.grid-->
     <footer class="footer-block">
       <div class="footer">
         <div class="copyright">
           <span class=>©2015 MSJ Develops. All rights reserved.</span>
-        </div>
-        <!--.copywright-->
+        </div> <!--.copywright-->
         <div class="links">
           <a id="project-email" href="mailto:msj.develops@gmail.com">Contact Us</a>
           <a id="github-link" href="https://github.com/sjoyal/TIY-Mashup">GitHub</a>
-        </div>
-        <!--.links-->
-      </div>
-      <!--.footer-->
-    </footer>
-    <!--.footer-block-->
+        </div> <!--.links-->
+      </div> <!--.footer-->
+    </footer> <!--.footer-block-->
   </main>
   <!--bower:js-->
   <script src="../bower_components/jquery/dist/jquery.js"></script>
